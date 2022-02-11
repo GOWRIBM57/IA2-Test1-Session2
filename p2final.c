@@ -41,5 +41,4 @@ int result;
     result =check_scalene(a,b,c);
     output(a,b,c,result);
     return 0;
-
   }
