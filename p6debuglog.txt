@@ -1,0 +1,152 @@
+ #include <stdio.h>
+#include <string.h>  
+void input_string(char *a)
+{
+    printf("enter the string\n");
+    scanf("%s", a);
+}
+void str_reverse(char *a,char *re)
+{
+  int l,i;
+  l = strlen(a); //strlen is used to find length of a string
+    for (int i = 0; i<l/2; i++) 
+    {
+      re[i]=a[i];
+      a[i]=a[l-1-i];
+      a[l-1-i]=re[i];
+    }
+}
+void output(char *a, char *re)
+{
+    printf("the reverse of %s is %s\n", re, a);
+}
+int main()
+{
+    char a[10], re[10];
+    input_string(a);
+    str_reverse(a, re);
+    output(a, re);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+void *input(char *a)
+{
+  printf("Enter the word that is to be reversed:");
+  scanf("%s",a);
+}
+char *str_rev(char *a)
+{
+  char temp;
+  int len=0;
+  for(int i=0;i<(len-1);i++)
+    {
+      temp=a[i];
+      a[i]=a[len-1-i];
+      a[len-1-i]=temp;
+    }
+}
+void output(char a,char reversea)
+{
+  printf("The reversed string is %d",reversea);
+}
+int main()
+{
+  char a[100];
+  int a,temp,len,reversea;
+  input(a);
+  str_rev(a);
+  output(a,reversa);
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include<stdio.h>         
+int input_array_size()
+{
+  int n;
+  printf("enter the number of values");
+  scanf("%d",&n);
+  return n;
+}
+void input_array(int n, int a[n])
+{
+   printf("enter the values");
+  for(int i=0;i<n;i++)
+    {
+      scanf("%d",&a[i]);
+    }
+}
+int is_composit(int n)
+{
+  for (int i=2;i<=n/2;i++)
+  {
+    if (n%i==0)
+    return 1;
+  }
+  return 0;
+}
+int sum_composite_number(int n,int a[n])
+{
+  int sum=0;
+  for(int i=0; i<n; i++)
+  {
+    if(is_composit(a[i]))
+    {
+      sum+=a[i];
+    }
+  }
+  return sum;
+}
+void out_put(int sum)
+{
+  printf(" %d",sum);
+}
+int main()
+{
+  int n,q;
+  n=input_array_size();
+  int a[n];
+  input_array(n,a);
+  q=sum_composite_number(n,a);
+  out_put(q);
+  return 0;
+}
+
+
