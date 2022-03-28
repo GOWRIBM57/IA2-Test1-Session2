@@ -36,4 +36,4 @@ int main()
   composite=iscomposite(n);
   output(n,composite);
   return 0;
-}
+} 
