@@ -69,3 +69,4 @@ int main()
   output(count, tris, small);
   return 0;
 }
+
